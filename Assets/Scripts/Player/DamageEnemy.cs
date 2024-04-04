@@ -5,20 +5,45 @@ using UnityEngine;
 public class DamageEnemy : MonoBehaviour
 {
     public int amount = 10;
+    private bool enemyIsTrigger = false;
+    [SerializeField] private EnemyStadistics enemyStadistics;
+
+    private void Start(){
+
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.F) && other.tag == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyStadistics>().LostLife(amount);
+            enemyIsTrigger = true;
+        }
+
+    }
+
+       private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            enemyIsTrigger = false;
+        }
+
+    }
+
+    void Update(){
+
+        if (Input.GetKeyDown(KeyCode.Q) && enemyIsTrigger)
+        {
+            enemyStadistics.LostLife(amount);
         }
 
     }
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.F) && other.tag == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyStadistics>().LostLife(amount);
+            enemyIsTrigger = true;
         }
 
     }

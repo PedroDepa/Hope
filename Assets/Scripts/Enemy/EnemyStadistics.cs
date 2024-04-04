@@ -11,8 +11,6 @@ public class EnemyStadistics : MonoBehaviour
 
     public Transform respawnWaypoint;
 
-   
-
     public void LostLife(int amount)
     {
         if (!enemyInvencible && lifeEnemy > 0)

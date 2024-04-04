@@ -35,8 +35,9 @@ public class EnemyMove : MonoBehaviour
     bool m_PlayerNear;
     bool m_IsPatrol;
     bool m_CaughtPlayer;
+    bool isWalking;
 
-    Animator animator;
+    private Animator animator;
 
     private void Start()
     {
@@ -46,6 +47,7 @@ public class EnemyMove : MonoBehaviour
         m_PlayerInRange = false;
         m_WaitTime = startWaitTime;
         m_TimeToRotate = timeToRotate;
+        isWalking = true;
 
         m_CurrentWaypointIndex = 0;
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -59,19 +61,19 @@ public class EnemyMove : MonoBehaviour
 
     private void Update()
     {
+        
+        animator.SetBool("isWalking", isWalking);
+
         EnviromentView();
         
         if(!m_IsPatrol)
         {
             Chasing();
-            animator.SetTrigger("Attack");
 
         }
         else
         {
             PatroLing();
-            animator.SetTrigger("Walk");
-
         }
     }
 
@@ -102,7 +104,6 @@ public class EnemyMove : MonoBehaviour
                 {
                     Stop();
                     m_WaitTime -= Time.deltaTime;
-                    animator.SetTrigger("Idle");
 
                 }
             }
@@ -121,7 +122,6 @@ public class EnemyMove : MonoBehaviour
             {
                 Move(speedWalk);
                 LookingPlayer(playerLastPosition);
-                animator.SetTrigger("Idle");
 
             }
             else
@@ -142,7 +142,6 @@ public class EnemyMove : MonoBehaviour
                     NextPoint();
                     Move(speedWalk);
                     m_WaitTime = startWaitTime;
-                    animator.SetTrigger("Idle");
 
                 }
                 else
@@ -157,12 +156,14 @@ public class EnemyMove : MonoBehaviour
 
         void Move(float speed)
         {
+            isWalking = true;
             navMeshAgent.isStopped = false;
             navMeshAgent.speed = speed;
         }
 
         void Stop()
         {
+            isWalking = false;
             navMeshAgent.isStopped = true;
             navMeshAgent.speed = 0;
         }

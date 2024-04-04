@@ -11,7 +11,9 @@ public class HealthAndDamage : MonoBehaviour
 
     public Transform respawnWaypoint;
    
-
+    void Start(){
+        
+    }
 
     public void LostLife(int calidad)
     {
