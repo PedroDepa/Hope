@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638484847623534574
-    m_Hash: 4288742188
+      ticks: 638484968015020521
+    m_Hash: 286345709
   m_LockFileStatus:
     m_FilePath: C:/Users/Pedro/Desktop/Idea TALLER 4/Hope/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638484847623604639
-    m_Hash: 877886475
+      ticks: 638484968015030532
+    m_Hash: 3780399233
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
