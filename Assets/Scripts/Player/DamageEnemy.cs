@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class DamageEnemy : MonoBehaviour
 {
-    public int amount = 10;
+    [SerializeField] private int amount = 10;
     private bool enemyIsTrigger = false;
     [SerializeField] private EnemyStadistics enemyStadistics;
 
+    private Animator animator;
+
+      private bool IsAttack = true;
+
     private void Start(){
 
+        animator = GetComponent<Animator>();
 
     }
 
     private void OnTriggerEnter(Collider other)
     {
+       
         if (other.gameObject.CompareTag("Enemy"))
         {
             enemyIsTrigger = true;
@@ -33,8 +39,10 @@ public class DamageEnemy : MonoBehaviour
 
     void Update(){
 
+        animator.SetBool("IsAttack", IsAttack);
         if (Input.GetKeyDown(KeyCode.Q) && enemyIsTrigger)
         {
+            IsAttack = true;
             enemyStadistics.LostLife(amount);
         }
 
