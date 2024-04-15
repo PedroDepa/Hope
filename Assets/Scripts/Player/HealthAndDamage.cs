@@ -2,24 +2,37 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class HealthAndDamage : MonoBehaviour
 {
-    public int life = 100;
-    public bool invencible = false;
-    public float timeInvencible = 1f;
+    [SerializeField] private float life;
+    [SerializeField] private float maxLife = 100f;
+    [SerializeField] private bool invencible = false;
+    [SerializeField] private float timeInvencible = 1f;
+    [SerializeField] private Transform respawnWaypoint;
 
-    public Transform respawnWaypoint;
+    public Image lifeBar;
+   
    
     void Start(){
-        
+
+        life = maxLife;
+        //life = Mathf.Clamp(life, 0, 100);//No permite que se modifique la vida+
+     
     }
 
-    public void LostLife(int calidad)
+    private void Update()
     {
+         lifeBar.fillAmount = life / maxLife;
+    }
+
+    public void LostLife(float damage)
+    {   
+        
         if (!invencible && life > 0)
         {
-            life -= calidad;
+            life -= damage;
+            
             StartCoroutine(Invulnerability());
         }
 
@@ -43,15 +56,17 @@ public class HealthAndDamage : MonoBehaviour
     }
 
     void Respawn()
-    {
+    {   
+        
         if (respawnWaypoint != null)
         {
             Dead();
+            life = maxLife;
+            invencible = false;
             gameObject.transform.position = respawnWaypoint.position;
             gameObject.transform.rotation = respawnWaypoint.rotation;
             //GameObject newObject = Instantiate(gameObject, respawnWaypoint.position, respawnWaypoint.rotation);
             gameObject.SetActive(true);
-
         }
     }
 }

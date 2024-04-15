@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class EnemyStadistics : MonoBehaviour
 {
-    public int lifeEnemy = 50;
-    public bool enemyInvencible = false;
-    public float enemyTimeInvencible = 1f;
+    [SerializeField] private int lifeEnemy = 50;
+    [SerializeField] private bool enemyInvencible = false;
+    [SerializeField] private float enemyTimeInvencible = 1f;
 
-    public Transform respawnWaypoint;
+    [SerializeField] private Transform respawnWaypoint;
 
     public void LostLife(int amount)
     {

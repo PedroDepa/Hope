@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class WayPointEnemy : MonoBehaviour
 {
-    public Transform nextWayPoint;
+    [SerializeField] private Transform nextWayPoint;
 }

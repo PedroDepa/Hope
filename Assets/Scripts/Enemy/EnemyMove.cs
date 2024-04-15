@@ -8,20 +8,20 @@ using UnityEngine.EventSystems;
 
 public class EnemyMove : MonoBehaviour
 {
-    public NavMeshAgent navMeshAgent;
-    public float startWaitTime = 4f;
-    public float timeToRotate = 2f;
-    public float speedWalk = 6f;
-    public float speedRun = 9f;
+    [SerializeField] private NavMeshAgent navMeshAgent;
+    [SerializeField] private float startWaitTime = 4f;
+    [SerializeField] private float timeToRotate = 2f;
+    [SerializeField] private float speedWalk = 6f;
+    [SerializeField] private float speedRun = 9f;
 
 
-    public float viewRadius = 15f;
-    public float viewAngle = 90f;
-    public LayerMask playerMask;
-    public LayerMask obstacleMask;
-    public float meshResolution = 1f;
-    public int edgeIterations = 4;
-    public float edgeDistance = 0.5f;
+    [SerializeField] private float viewRadius = 15f;
+    [SerializeField] private float viewAngle = 90f;
+    [SerializeField] private LayerMask playerMask;
+    [SerializeField] private LayerMask obstacleMask;
+    [SerializeField] private float meshResolution = 1f;
+    [SerializeField] private int edgeIterations = 4;
+    [SerializeField] private float edgeDistance = 0.5f;
 
     public Transform[] waypoints;
     int m_CurrentWaypointIndex;
