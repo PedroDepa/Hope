@@ -18,7 +18,6 @@ public class HealthAndDamage : MonoBehaviour
 
         life = maxLife;
         //life = Mathf.Clamp(life, 0, 100);//No permite que se modifique la vida+
-     
     }
 
     private void Update()
