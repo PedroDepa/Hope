@@ -43,6 +43,7 @@ public class HealthAndDamage : MonoBehaviour
 
     IEnumerator Invulnerability()
     {
+        //Poner un animacion recibir daño
         invencible = true;
         yield return new WaitForSeconds(timeInvencible);
         invencible = false;
