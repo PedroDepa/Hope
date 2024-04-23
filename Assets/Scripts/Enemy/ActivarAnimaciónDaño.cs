@@ -7,20 +7,53 @@ public class ActivarAnimaciónDaño : MonoBehaviour
     bool playerInArea;
     bool enemyAttackOn;
 
+    private Animator animator;
+    private bool canAttack = true; // Variable para controlar si se puede atacar
+
+    [SerializeField] private EnemyMove enemyMove;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    void OnTriggerStay()
+    void OnTriggerEnter(Collider other) // Cambiar de OnTriggerStay a OnTriggerEnter para detectar la colisión al entrar en el área
     {
-        playerInArea = true;
+        if(other.CompareTag("Player")) // Verificar colisión con el jugador
+        {
+            enemyMove.enabled = false;
+            canAttack = true; // Evitar nuevos ataques mientras se realiza uno
+            playerInArea = true;
+            StartAttackCoroutine();
+            
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void OnTriggerStay(Collider other)
     {
-        if (playerInArea && !enemyAttackOn)
+         if(other.CompareTag("Player")) // Restablecer cuando el jugador sale del área
+        {
+            enemyMove.enabled = false;
+            canAttack = true; // Evitar nuevos ataques mientras se realiza uno
+            playerInArea = true;
+            StartAttackCoroutine();
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Player")) // Restablecer cuando el jugador sale del área
+        {
+            enemyMove.enabled = true;
+            playerInArea = false;
+            enemyAttackOn = false;
+            StopAllCoroutines();
+            animator.SetBool("isAttacking", false); // Asegurarse de que la animación de ataque se detenga
+        }
+    }
+
+    private void StartAttackCoroutine()
+    {
+        if (playerInArea && !enemyAttackOn && canAttack)
         {
             StartCoroutine(StartAttack());
         }
@@ -29,15 +62,15 @@ public class ActivarAnimaciónDaño : MonoBehaviour
     private IEnumerator StartAttack()
     {
         enemyAttackOn = true;
-        //canAttack = false; // Evitar nuevos ataques mientras se realiza uno
-        //damageCollider.enabled = true;
-        //animacion ataque
-        yield return new WaitForSeconds(0.5f); // Tiempo que la animación de ataque dura
+        canAttack = false; // Evitar nuevos ataques mientras se realiza uno
+        
+        animator.SetBool("isAttacking", true); // Activar la animación de ataque
+        yield return new WaitForSeconds(2f); // Tiempo que la animación de ataque dura
+
         enemyAttackOn = false;
-        //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.5f); // Resto de la duración de la animación
-        //IsAttacking = false;
-        //animator.SetBool("IsAttacking", IsAttacking);
-        //damageCollider.enabled = false;
+        animator.SetBool("isAttacking", false); // Desactivar la animación de ataque
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 2f); // Resto de la duración de la animación
+
         //canAttack = true; // Permitir nuevos ataques una vez que termine la animación
     }
 }
