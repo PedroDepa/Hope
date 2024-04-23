@@ -65,11 +65,11 @@ public class ActivarAnimaciónDaño : MonoBehaviour
         canAttack = false; // Evitar nuevos ataques mientras se realiza uno
         
         animator.SetBool("isAttacking", true); // Activar la animación de ataque
-        yield return new WaitForSeconds(2f); // Tiempo que la animación de ataque dura
+        yield return new WaitForSeconds(5f); // Tiempo que la animación de ataque dura
 
         enemyAttackOn = false;
         animator.SetBool("isAttacking", false); // Desactivar la animación de ataque
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 2f); // Resto de la duración de la animación
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 5f); // Resto de la duración de la animación
 
         //canAttack = true; // Permitir nuevos ataques una vez que termine la animación
     }

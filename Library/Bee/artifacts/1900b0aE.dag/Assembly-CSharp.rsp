@@ -376,7 +376,9 @@
 "Assets/Scripts/Enemy/WayPointEnemy.cs"
 "Assets/Scripts/Player/DamageEnemy.cs"
 "Assets/Scripts/Player/HealthAndDamage.cs"
+"Assets/Scripts/Player/MovimientodelPersonaje.cs"
 "Assets/Scripts/Player/PlayerMove.cs"
+"Assets/Scripts/Player/Shield.cs"
 -langversion:9.0
 
 /deterministic
