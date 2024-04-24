@@ -7,6 +7,8 @@ TagManager:
   - WayPoint
   - Enemy
   - RecolectorItems
+  - Boss
+  - Ground
   layers:
   - Default
   - TransparentFX

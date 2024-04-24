@@ -28,12 +28,14 @@ public class EnemyStadistics : MonoBehaviour
             if (lifeEnemy <= 0)
             {
             Respawnd();
+            Dead();
             }
         }
     }
     void Dead()
     {
         gameObject.SetActive(false);
+       
     }
 
     void Respawnd()
@@ -41,11 +43,11 @@ public class EnemyStadistics : MonoBehaviour
         if (respawnWaypoint != null)
         {
             Dead();
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             gameObject.transform.position = respawnWaypoint.position;
             gameObject.transform.rotation = respawnWaypoint.rotation;
-            gameObject.SetActive(true);
-            lifeEnemy = maxLifeEnemy;
+            //gameObject.SetActive(true);
+            //lifeEnemy = maxLifeEnemy;
         }
     }
 

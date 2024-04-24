@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DamageEnemy : MonoBehaviour
@@ -12,27 +13,26 @@ public class DamageEnemy : MonoBehaviour
     private bool IsAttacking = false;
     private Animator animator;
     [SerializeField] private BoxCollider damageCollider;
+
+    bool leftFist;
+
+    GameObject enemy;
     private bool canAttack = true; // Nueva variable para controlar si se puede realizar el ataque
 
+
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
         damageCollider.enabled = false;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            enemyIsTrigger = true;
-        }
-    }
-
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy")|| other.gameObject.CompareTag("Boss"))
         {
             enemyIsTrigger = false;
+            enemy = null;
         }
     }
 
@@ -41,6 +41,12 @@ public class DamageEnemy : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             enemyIsTrigger = true;
+            enemy = other.gameObject;
+        }
+         if (other.gameObject.CompareTag("Boss"))
+        {
+            enemyIsTrigger = true;
+            enemy = other.gameObject;
         }
     }
 
@@ -51,12 +57,29 @@ public class DamageEnemy : MonoBehaviour
             IsAttacking = true;
             activeAttack();
             StartCoroutine(DealDamage());
+
         }
     }
+
 
     private void activeAttack()
     {
         animator.SetBool("IsAttacking", IsAttacking);
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z); //No hago animacion :3
+        //animator.SetBool("ataquederecho", ataquederecho);
+
+    }
+
+    private void Damage(GameObject enemyRef)
+    {
+        if(enemyRef.CompareTag("Enemy"))
+        {
+            enemyRef.GetComponent<EnemyStadistics>().LostLife(amount);
+
+        }else if(enemyRef.CompareTag("Boss"))
+        {
+            enemyRef.GetComponent<LifeMiniBoss>().LostLife(amount);
+        }
     }
 
     private IEnumerator DealDamage()
@@ -66,8 +89,7 @@ public class DamageEnemy : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Tiempo que la animación de ataque dura
         if (enemyIsTrigger)
         {
-            enemyStadistics.LostLife(amount);
-            miniBossStadistics.LostLife(amount);
+            Damage(enemy);
         }
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.5f); // Resto de la duración de la animación
         IsAttacking = false;
