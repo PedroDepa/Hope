@@ -25,27 +25,22 @@ public class Shield : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             //GetComponent<Animator>().SetBool("isProtecting", true);
-            playerStadistics.enabled = false;
+            //playerStadistics.enabled = false;
             playerMove.enabled = false;
-            isInvulnerable = true;
-            StartCoroutine(tiempoEscudo());
+            playerStadistics.invencible = true;
+           
         }
         if (Input.GetMouseButtonUp(1))
         {
-            isInvulnerable = false;
             //GetComponent<Animator>().SetBool("isProtecting", false);
-            playerStadistics.enabled = true;
+            //playerStadistics.enabled = true;
             playerMove.enabled = true;
-            isInvulnerable = false;
+            playerStadistics.invencible = false;
 
         }
     }
 
-    IEnumerator tiempoEscudo()
-    {
-        yield return new WaitForSeconds(0.5f);
-        isInvulnerable = false;
-    }
+    
 
    
 }

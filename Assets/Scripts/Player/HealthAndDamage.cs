@@ -7,7 +7,7 @@ public class HealthAndDamage : MonoBehaviour
 {
     [SerializeField] private float life;
     [SerializeField] private float maxLife = 100f;
-    [SerializeField] private bool invencible = false;
+    public bool invencible = false;
     [SerializeField] private float timeInvencible = 1f;
     [SerializeField] private Transform respawnWaypoint;
 
