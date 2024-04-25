@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class HealthAndDamage : MonoBehaviour
@@ -10,63 +8,62 @@ public class HealthAndDamage : MonoBehaviour
     public bool invencible = false;
     [SerializeField] private float timeInvencible = 1f;
     [SerializeField] private Transform respawnWaypoint;
-
     public Image lifeBar;
-   
-   
-    void Start(){
+    private Animator animator; // Variable para el Animator
 
+    void Start()
+    {
         life = maxLife;
-        //life = Mathf.Clamp(life, 0, 100);//No permite que se modifique la vida+
+        animator = GetComponent<Animator>(); // Obtener el componente Animator
     }
 
     private void Update()
     {
-         lifeBar.fillAmount = life / maxLife;
+        lifeBar.fillAmount = life / maxLife;
     }
 
     public void LostLife(float damage)
-    {   
-        
+    {
         if (!invencible && life > 0)
         {
             life -= damage;
-            
             StartCoroutine(Invulnerability());
         }
 
         if (life <= 0)
         {
             Respawn();
-        } 
+        }
     }
 
     IEnumerator Invulnerability()
     {
-        //Poner un animacion recibir daño
         invencible = true;
         yield return new WaitForSeconds(timeInvencible);
         invencible = false;
     }
 
-  
-    void Dead()
+    IEnumerator RespawnAfterDelay(float delay)
     {
-        gameObject.SetActive(false);
+        animator.SetBool("isDead", true);  // Iniciar la animación de muerte
+        float deathAnimationLength = animator.GetCurrentAnimatorStateInfo(0).length; // Obtener la duración de la animación de muerte
+        yield return new WaitForSeconds(delay + deathAnimationLength);
+        animator.SetBool("isDead", false); // Restablecer la animación de muerte
+
+        life = maxLife;
+        invencible = false;
+        gameObject.transform.position = respawnWaypoint.position;
+        gameObject.transform.rotation = respawnWaypoint.rotation;
     }
 
     void Respawn()
-    {   
-        
+    {
         if (respawnWaypoint != null)
         {
-            Dead();
-            life = maxLife;
-            invencible = false;
-            gameObject.transform.position = respawnWaypoint.position;
-            gameObject.transform.rotation = respawnWaypoint.rotation;
-            //GameObject newObject = Instantiate(gameObject, respawnWaypoint.position, respawnWaypoint.rotation);
-            gameObject.SetActive(true);
+            StartCoroutine(RespawnAfterDelay(5f));
         }
     }
 }
+
+
+
