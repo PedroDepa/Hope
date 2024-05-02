@@ -65,19 +65,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy\MakeDamage.cs" />
+    <Compile Include="Assets\Scripts\MainMenuaGame.cs" />
     <Compile Include="Assets\Scripts\Enemy\ActivarAnimaciónDaño.cs" />
     <Compile Include="Assets\Scripts\Player\DamageEnemy.cs" />
     <Compile Include="Assets\Scripts\Player\MovimientodelPersonaje.cs" />
     <Compile Include="Assets\Scripts\Enemy\WayPointEnemy.cs" />
+    <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
+    <Compile Include="Assets\Scripts\Enemy\ActivarVaya.cs" />
     <Compile Include="Assets\Scripts\Enemy\LifeMiniBoss.cs" />
     <Compile Include="Assets\Scripts\Enemy\BarLifeEnemy.cs" />
-    <Compile Include="Assets\MainMenuaGame.cs" />
+    <Compile Include="Assets\Scripts\Volver el Menu\Imagenmenu.cs" />
+    <Compile Include="Assets\Scripts\Opciones\Opciones.cs" />
+    <Compile Include="Assets\Scripts\Player\OpcionesJuego.cs" />
+    <Compile Include="Assets\Scripts\IralMenu.cs" />
+    <Compile Include="Assets\Scripts\Reiniciar el nivel\ReiniciarNivel.cs" />
     <Compile Include="Assets\Scripts\Enemy\MiniBoss.cs" />
     <Compile Include="Assets\Scripts\Player\HealthAndDamage.cs" />
     <Compile Include="Assets\Scripts\Player\Shield.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\Enemy\ActivarVida.cs" />
+    <Compile Include="Assets\Scripts\Reiniciar el nivel\Reiniciar en opciones.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStadistics.cs" />
+    <Compile Include="Assets\Scripts\CullLayers\CullLayers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -86,7 +95,9 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\LowPolyWater_Pack\LowPoly Island\Credits.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />

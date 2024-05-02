@@ -3,16 +3,19 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HealthAndDamage : MonoBehaviour
 {
-    [SerializeField] private float life;
+    [SerializeField] public float life;
     [SerializeField] private float maxLife = 100f;
     public bool invencible = false;
     [SerializeField] private float timeInvencible = 1f;
     [SerializeField] private Transform respawnWaypoint;
+    [SerializeField] MovimientodelPersonaje playerMove;
     public Image lifeBar;
     private Animator animator; // Variable para el Animator
 
     void Start()
     {
+        playerMove = GetComponent<MovimientodelPersonaje>();
+
         life = maxLife;
         animator = GetComponent<Animator>(); // Obtener el componente Animator
     }
@@ -38,13 +41,19 @@ public class HealthAndDamage : MonoBehaviour
 
     IEnumerator Invulnerability()
     {
+        animator.SetBool("isLostLife", true);
+        playerMove.enabled = false;
         invencible = true;
         yield return new WaitForSeconds(timeInvencible);
+        animator.SetBool("isLostLife", false);
+                playerMove.enabled = true;
         invencible = false;
+
     }
 
     IEnumerator RespawnAfterDelay(float delay)
     {
+
         animator.SetBool("isDead", true);  // Iniciar la animación de muerte
         float deathAnimationLength = animator.GetCurrentAnimatorStateInfo(0).length; // Obtener la duración de la animación de muerte
         yield return new WaitForSeconds(delay + deathAnimationLength);

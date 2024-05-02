@@ -9,6 +9,7 @@ TagManager:
   - RecolectorItems
   - Boss
   - Ground
+  - Activable
   layers:
   - Default
   - TransparentFX
@@ -18,14 +19,14 @@ TagManager:
   - UI
   - Player
   - Obstacles
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Paredes
+  - Rocas
+  - Troncos
+  - Vayas
+  - Picos
+  - Arboles
+  - Camera
+  - CullLayers
   - 
   - 
   - 

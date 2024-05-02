@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class EnemyStadistics : MonoBehaviour
 {
-    [SerializeField] private float lifeEnemy = 50;
+    [SerializeField] private float lifeEnemy;
     [SerializeField] private float maxLifeEnemy = 50;
+    [SerializeField] private Slider sliderEnemy;
     [SerializeField] private bool enemyInvencible = false;
     [SerializeField] private float enemyTimeInvencible = 1f;
 
@@ -16,6 +18,12 @@ public class EnemyStadistics : MonoBehaviour
     void Start()
     {
         lifeEnemy = maxLifeEnemy;
+        
+    }
+
+    private void Update()
+    {
+        sliderEnemy.value = lifeEnemy;
     }
 
     public void LostLife(int damagePlayer)

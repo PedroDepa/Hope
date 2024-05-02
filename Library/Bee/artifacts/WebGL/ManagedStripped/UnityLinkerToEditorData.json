@@ -281,7 +281,9 @@
           },
           {
             "name": "LightingSettings",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -645,6 +647,12 @@
             "icon": "package/com.unity.modules.uielements"
           },
           {
+            "name": "Required by Umbra Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.umbra"
+          },
+          {
             "name": "Required by WebGL Module",
             "scenes": [],
             "dependencyType": 2,
@@ -746,9 +754,7 @@
           },
           {
             "name": "CharacterController",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -966,6 +972,12 @@
             "icon": "package/com.unity.modules.uielements"
           },
           {
+            "name": "Required by Umbra Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.umbra"
+          },
+          {
             "name": "Required by WebGL Module",
             "scenes": [],
             "dependencyType": 2,
@@ -1061,7 +1073,8 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/Main Menu.unity"
+              "Assets/Scenes/Main Menu.unity",
+              "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1136,6 +1149,27 @@
       {
         "name": "UIElements",
         "dependencies": []
+      },
+      {
+        "name": "Umbra",
+        "dependencies": [
+          {
+            "name": "OcclusionCullingData",
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "OcclusionCullingSettings",
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
+            "dependencyType": 1,
+            "icon": null
+          }
+        ]
       },
       {
         "name": "WebGL",

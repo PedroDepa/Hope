@@ -19,7 +19,43 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'metarig|NewIdle' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'hand.L.001' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'hand.L.002' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'metarig|NewPunch' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'hand.L.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.L.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'metarig|NewRun' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'hand.L.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.L.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'metarig|NewShield' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'hand.L.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.L.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'metarig|NewWalk' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'hand.L.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.L.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'metarig|ReciveDagame' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'hand.L.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.L.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'hand.R.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -37,14 +73,14 @@ ModelImporter:
       takeName: metarig|Idle
       internalID: -5324238279805231817
       firstFrame: 0
-      lastFrame: 72
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -91,11 +127,185 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: metarig|NewIdle
+      takeName: metarig|NewIdle
+      internalID: 3407652464394524605
+      firstFrame: 0
+      lastFrame: 53
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|NewPunch
+      takeName: metarig|NewPunch
+      internalID: -3404155293165134949
+      firstFrame: 0
+      lastFrame: 8
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|NewRun
+      takeName: metarig|NewRun
+      internalID: -5919902502283136588
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|NewShield
+      takeName: metarig|NewShield
+      internalID: -7504703165468978269
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|NewWalk
+      takeName: metarig|NewWalk
+      internalID: -1512664656196128013
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: metarig|Punch L
       takeName: metarig|Punch L
       internalID: 5513464914572050797
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|ReciveDagame
+      takeName: metarig|ReciveDagame
+      internalID: 4311710012487083742
+      firstFrame: 0
+      lastFrame: 56
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -131,36 +341,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: metarig|Walk
-      takeName: metarig|Walk
-      internalID: 2933577835342229695
-      firstFrame: 0
-      lastFrame: 29
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -321,21 +502,46 @@ ModelImporter:
     - name: upper_arm.L
       parentName: shoulder.L
       position: {x: 0.000027510567, y: 0.002381527, z: -0.00032249457}
-      rotation: {x: 0.06930631, y: -0.7408657, z: 0.1545081, w: 0.64995545}
-      scale: {x: 1.0000032, y: 1.000004, z: 0.9999994}
+      rotation: {x: 0.08832261, y: -0.735798, z: 0.16090396, w: 0.65185153}
+      scale: {x: 1.0000021, y: 1.0000021, z: 0.9999993}
     - name: forearm.L
       parentName: upper_arm.L
-      position: {x: -5.587935e-10, y: 0.003831984, z: 1.4901161e-10}
-      rotation: {x: 0.028018327, y: 0.1267939, z: -0.050712097, w: 0.9902357}
-      scale: {x: 0.9999982, y: 1.0000018, z: 0.9999983}
+      position: {x: 4.749745e-10, y: 0.003599625, z: 3.7718564e-10}
+      rotation: {x: 0.0046092174, y: 0.10943366, z: -0.038725205, w: 0.9932288}
+      scale: {x: 0.999998, y: 1.0000032, z: 0.9999977}
     - name: hand.L
       parentName: forearm.L
-      position: {x: 1.094304e-10, y: 0.003415805, z: 9.313225e-11}
-      rotation: {x: -0.057941116, y: -0.087871015, z: -0.0036963215, w: 0.99443847}
-      scale: {x: 1.0000014, y: 0.9999997, z: 1.0000035}
-    - name: hand.L_end
+      position: {x: -2.4214386e-10, y: 0.0034169862, z: -5.2154064e-10}
+      rotation: {x: -0.036487397, y: -0.087896585, z: 0.0003142161, w: 0.9954611}
+      scale: {x: 1.0000012, y: 1.0000013, z: 1.0000021}
+    - name: hand.L.001
       parentName: hand.L
-      position: {x: -0, y: 0.0019772935, z: 0}
+      position: {x: -6.705522e-10, y: 0.0023512563, z: -4.0978193e-10}
+      rotation: {x: -0.27014387, y: 0.0014791485, z: 0.02067058, w: 0.9625969}
+      scale: {x: 1.0000024, y: 0.9999977, z: 1.0000045}
+    - name: hand.L.002
+      parentName: hand.L.001
+      position: {x: 0.00000000115484, y: 0.0035013375, z: 8.1956386e-10}
+      rotation: {x: 0.060986042, y: -0.0008442212, z: 0.0051120576, w: 0.9981252}
+      scale: {x: 0.99999976, y: 0.99999905, z: 1.0000019}
+    - name: hand.L.003
+      parentName: hand.L.002
+      position: {x: 0.0000000018253922, y: 0.0037300354, z: -7.45058e-10}
+      rotation: {x: 0.13178456, y: 0.00025958757, z: -0.012854967, w: 0.991195}
+      scale: {x: 1.0000011, y: 0.9999975, z: 1.0000021}
+    - name: hand.L.004
+      parentName: hand.L.003
+      position: {x: 0.0000000020302833, y: 0.0023732337, z: 8.9406965e-10}
+      rotation: {x: -0.008460967, y: -0.0015568543, z: -0.013493998, w: 0.999872}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000004}
+    - name: hand.L.005
+      parentName: hand.L.004
+      position: {x: 4.0978193e-10, y: 0.002689282, z: 1.4901161e-10}
+      rotation: {x: -0.014448197, y: 0.0016665503, z: 0.018270394, w: 0.99972737}
+      scale: {x: 1.0000017, y: 1.0000017, z: 0.99999887}
+    - name: hand.L.005_end
+      parentName: hand.L.005
+      position: {x: -0, y: 0.0026600321, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: shoulder.R
@@ -346,21 +552,46 @@ ModelImporter:
     - name: upper_arm.R
       parentName: shoulder.R
       position: {x: -0.000027510567, y: 0.002381527, z: -0.00032249457}
-      rotation: {x: 0.06930631, y: 0.74086565, z: -0.1545081, w: 0.6499555}
-      scale: {x: 1.0000024, y: 1.0000031, z: 0.99999946}
+      rotation: {x: 0.088322945, y: 0.73579794, z: -0.1609033, w: 0.6518516}
+      scale: {x: 1.0000026, y: 1.0000031, z: 0.9999994}
     - name: forearm.R
       parentName: upper_arm.R
-      position: {x: -6.3329936e-10, y: 0.003831983, z: 0}
-      rotation: {x: 0.028018236, y: -0.12679371, z: 0.05071279, w: 0.9902356}
-      scale: {x: 1.0000005, y: 1.0000035, z: 0.9999981}
+      position: {x: -4.842877e-10, y: 0.003599625, z: 3.7718564e-10}
+      rotation: {x: 0.0046101217, y: -0.10943337, z: 0.038724996, w: 0.9932288}
+      scale: {x: 0.9999986, y: 1.0000025, z: 0.99999756}
     - name: hand.R
       parentName: forearm.R
-      position: {x: 4.0745362e-11, y: 0.0034158072, z: 2.3283063e-11}
-      rotation: {x: -0.057941183, y: 0.0878709, z: 0.003696147, w: 0.9944385}
-      scale: {x: 1.0000005, y: 0.9999999, z: 1.0000029}
-    - name: hand.R_end
+      position: {x: 2.7939676e-10, y: 0.0034169848, z: -1.4901161e-10}
+      rotation: {x: -0.03648743, y: 0.08789672, z: -0.0003140974, w: 0.9954611}
+      scale: {x: 1.0000006, y: 0.9999998, z: 1.0000019}
+    - name: hand.R.001
       parentName: hand.R
-      position: {x: -0, y: 0.0019772935, z: 0}
+      position: {x: -7.4505804e-11, y: 0.0023512573, z: 5.681068e-10}
+      rotation: {x: -0.27014378, y: -0.0014792082, z: -0.020670487, w: 0.962597}
+      scale: {x: 1.0000046, y: 0.9999984, z: 1.000006}
+    - name: hand.R.002
+      parentName: hand.R.001
+      position: {x: -0.0000000014528632, y: 0.0035013396, z: -1.4901161e-10}
+      rotation: {x: 0.060986, y: 0.0008443535, z: -0.005112032, w: 0.9981252}
+      scale: {x: 1.0000011, y: 1.0000014, z: 1.0000024}
+    - name: hand.R.003
+      parentName: hand.R.002
+      position: {x: 0.0000000031199305, y: 0.0037300347, z: -4.2840836e-10}
+      rotation: {x: 0.13178481, y: -0.000260003, z: 0.0128554925, w: 0.99119496}
+      scale: {x: 1.0000013, y: 0.9999998, z: 1.0000011}
+    - name: hand.R.004
+      parentName: hand.R.003
+      position: {x: 0.0000000010617077, y: 0.0023732337, z: -3.7252902e-11}
+      rotation: {x: -0.008460938, y: 0.0015569017, z: 0.013494104, w: 0.999872}
+      scale: {x: 1.0000029, y: 1.0000033, z: 1.0000006}
+    - name: hand.R.005
+      parentName: hand.R.004
+      position: {x: -8.754432e-10, y: 0.0026892822, z: 6.3329936e-10}
+      rotation: {x: -0.014448233, y: -0.0016665858, z: -0.018270511, w: 0.9997273}
+      scale: {x: 1.0000027, y: 1.0000026, z: 0.99999905}
+    - name: hand.R.005_end
+      parentName: hand.R.005
+      position: {x: -0, y: 0.0026600321, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: spine.007
@@ -481,23 +712,23 @@ ModelImporter:
     - name: thigh.R
       parentName: spine
       position: {x: 0.0021696414, y: -0.00064793346, z: 0.00059665815}
-      rotation: {x: 0.98708594, y: -0.009314565, z: 0.0015813393, w: 0.1599129}
+      rotation: {x: 0.98708594, y: -0.009314564, z: 0.0015813388, w: 0.1599129}
       scale: {x: 1.0000011, y: 1.0000013, z: 0.9999987}
     - name: shin.R
       parentName: thigh.R
       position: {x: -1.0812073e-10, y: 0.003865553, z: 5.0513333e-11}
-      rotation: {x: 0.10900445, y: -0.009353902, z: 0.039381042, w: 0.9932169}
-      scale: {x: 0.99999964, y: 1.0000051, z: 1.0000029}
+      rotation: {x: 0.10900445, y: -0.009353901, z: 0.039381046, w: 0.9932169}
+      scale: {x: 0.99999964, y: 1.0000051, z: 1.0000033}
     - name: foot.R
       parentName: shin.R
       position: {x: -1.4028045e-10, y: 0.0046909796, z: 1.3969838e-11}
       rotation: {x: -0.7244632, y: 0.030214727, z: -0.053745113, w: 0.6865505}
-      scale: {x: 0.99999946, y: 1.0000045, z: 1.0000019}
+      scale: {x: 0.99999946, y: 1.0000038, z: 1.0000019}
     - name: toe.R
       parentName: foot.R
       position: {x: 9.400537e-11, y: 0.0017779769, z: 2.7939677e-11}
       rotation: {x: -0.019016564, y: 0.991549, z: -0.12765212, w: 0.013190515}
-      scale: {x: 1.0000055, y: 1.0000051, z: 1.000002}
+      scale: {x: 1.0000058, y: 1.0000057, z: 1.000003}
     - name: toe.R_end
       parentName: toe.R
       position: {x: -0, y: 0.00048143725, z: 0}
@@ -507,7 +738,7 @@ ModelImporter:
       parentName: foot.R
       position: {x: -0.00043452636, y: 0.00012211251, z: 0.0004732419}
       rotation: {x: 0.6874025, y: 0.7203399, z: 0.022468477, w: 0.08990812}
-      scale: {x: 1.0000032, y: 1.0000031, z: 1.0000021}
+      scale: {x: 1.0000035, y: 1.0000027, z: 1.0000024}
     - name: heel.02.R_end
       parentName: heel.02.R
       position: {x: -0, y: 0.0010357922, z: 0}

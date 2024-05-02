@@ -9,8 +9,9 @@ public class MovimientodelPersonaje : MonoBehaviour
 
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float currentSpeed;
-     [SerializeField] private float runSpeed = 10f;
+    [SerializeField] private float runSpeed = 10f;
     [SerializeField] private float turnSmoothTime = 0.1f; // Se ha ajustado el tiempo de suavizado de la rotación
+    private bool canRun;
 
     float turnSmoothVelocity;
     float verticalVelocity;
@@ -22,6 +23,7 @@ public class MovimientodelPersonaje : MonoBehaviour
 
     void Start()
     {
+        canRun = false;
         animator = GetComponent<Animator>();
         currentSpeed = walkSpeed;
     }
@@ -35,6 +37,7 @@ public class MovimientodelPersonaje : MonoBehaviour
         animator.SetFloat("speed", direction.sqrMagnitude);
         if (direction.magnitude >= 0.1f)
         {
+            canRun = true;
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 
@@ -47,13 +50,14 @@ public class MovimientodelPersonaje : MonoBehaviour
         Vector3 verticalMove = Vector3.up * verticalVelocity;
         transform.Translate(verticalMove * Time.deltaTime, Space.World);
 
-     if (isRunning)
+        if (isRunning && canRun)
         {
             animator.SetBool("isRunning", true);
             currentSpeed = runSpeed;
         }
         else
         {
+            canRun = false;
             animator.SetBool("isRunning", false);
             currentSpeed = walkSpeed;
         }

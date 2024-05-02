@@ -2,16 +2,22 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - "ActivarAnimaci\xF3nDa\xF1o"
+    - ActivarVaya
     - ActivarVida
     - DamageEnemy
     - EnemyMove
     - EnemyStadistics
+    - GameManager
     - HealthAndDamage
+    - Imagenmenu
+    - IralMenu
     - LifeMiniBoss
+    - LowPolyWater.LowPolyWater
     - MainMenuaGame
     - MakeDamage
-    - MiniBoss
     - MovimientodelPersonaje
+    - OpcionesJuego
+    - Reiniciarenopciones
     - Shield
     - WayPointEnemy
     Cinemachine.dll:
@@ -48,8 +54,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -62,6 +70,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
   serializedClasses:
     Cinemachine:
     - Cinemachine.AxisState
@@ -103,10 +112,20 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuaGame
+    methodName: EscenaJuego
+  - assembly: Assembly-CSharp
+    fullTypeName: IralMenu
+    methodName: EscenaJuego
+  - assembly: Assembly-CSharp
+    fullTypeName: IralMenu
+    methodName: EscenaJuego
+  - assembly: Assembly-CSharp
+    fullTypeName: Reiniciarenopciones
     methodName: EscenaJuego
   sceneClasses:
     Assets/Scenes/Main Menu.unity:
@@ -131,29 +150,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1680}
+      Script: {instanceID: 1684}
     - Class: 114
-      Script: {instanceID: 2430}
+      Script: {instanceID: 2434}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2918}
     - Class: 114
-      Script: {instanceID: 3156}
+      Script: {instanceID: 3160}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3510}
     - Class: 114
-      Script: {instanceID: 3672}
+      Script: {instanceID: 3678}
     - Class: 114
-      Script: {instanceID: 4692}
+      Script: {instanceID: 4704}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5016}
     - Class: 114
-      Script: {instanceID: 5856}
+      Script: {instanceID: 5870}
     - Class: 114
-      Script: {instanceID: 6540}
+      Script: {instanceID: 6554}
     - Class: 114
-      Script: {instanceID: 6740}
+      Script: {instanceID: 6758}
     - Class: 114
-      Script: {instanceID: 7132}
+      Script: {instanceID: 7150}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,6 +201,8 @@ ScriptsOnlyBuild:
     - Class: 23
       Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 29
       Script: {instanceID: 0}
     - Class: 33
       Script: {instanceID: 0}
@@ -212,60 +233,82 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1680}
+      Script: {instanceID: 1684}
     - Class: 114
-      Script: {instanceID: 1794}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 1900}
+      Script: {instanceID: 1904}
     - Class: 114
-      Script: {instanceID: 1924}
+      Script: {instanceID: 1928}
     - Class: 114
-      Script: {instanceID: 1984}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2918}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 3160}
     - Class: 114
-      Script: {instanceID: 3156}
+      Script: {instanceID: 3510}
     - Class: 114
-      Script: {instanceID: 4242}
+      Script: {instanceID: 3718}
     - Class: 114
-      Script: {instanceID: 4442}
+      Script: {instanceID: 3728}
     - Class: 114
-      Script: {instanceID: 5432}
+      Script: {instanceID: 4252}
     - Class: 114
-      Script: {instanceID: 5476}
+      Script: {instanceID: 4454}
     - Class: 114
-      Script: {instanceID: 5928}
+      Script: {instanceID: 4550}
     - Class: 114
-      Script: {instanceID: 5952}
+      Script: {instanceID: 5444}
     - Class: 114
-      Script: {instanceID: 6272}
+      Script: {instanceID: 5488}
     - Class: 114
-      Script: {instanceID: 6376}
+      Script: {instanceID: 5500}
     - Class: 114
-      Script: {instanceID: 6506}
+      Script: {instanceID: 5798}
     - Class: 114
-      Script: {instanceID: 6540}
+      Script: {instanceID: 5870}
     - Class: 114
-      Script: {instanceID: 6822}
+      Script: {instanceID: 5942}
     - Class: 114
-      Script: {instanceID: 7132}
+      Script: {instanceID: 5966}
     - Class: 114
-      Script: {instanceID: 8546}
+      Script: {instanceID: 6286}
     - Class: 114
-      Script: {instanceID: 8866}
+      Script: {instanceID: 6390}
+    - Class: 114
+      Script: {instanceID: 6520}
+    - Class: 114
+      Script: {instanceID: 6554}
+    - Class: 114
+      Script: {instanceID: 6758}
+    - Class: 114
+      Script: {instanceID: 6840}
+    - Class: 114
+      Script: {instanceID: 7150}
+    - Class: 114
+      Script: {instanceID: 7424}
+    - Class: 114
+      Script: {instanceID: 8132}
+    - Class: 114
+      Script: {instanceID: 8566}
+    - Class: 114
+      Script: {instanceID: 8886}
+    - Class: 114
+      Script: {instanceID: 9018}
+    - Class: 114
+      Script: {instanceID: 28320}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
     - Class: 137
-      Script: {instanceID: 0}
-    - Class: 143
       Script: {instanceID: 0}
     - Class: 154
       Script: {instanceID: 0}
@@ -289,6 +332,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 238
       Script: {instanceID: 0}
+    - Class: 363
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
     - Class: 1953259897
       Script: {instanceID: 0}
   scriptHashData:
@@ -306,7 +353,7 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 6dc3d50d974930547c6cf2c11d89a329
+      Hash: f576ca3b6f75eef911342e0b95f80fa1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Shield
@@ -606,6 +653,12 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 23bd8cbb80a53909e8a8273d1579c3ca
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Opciones
+  - hash:
+      serializedVersion: 2
       Hash: 19c7094e1c1b151057c372890e57f46f
     assemblyName: Unity.ProBuilder
     namespaceName: UnityEngine.ProBuilder
@@ -672,10 +725,22 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
+      Hash: 7351dccfb4c2048f67fbc88987bcb9e6
+    assemblyName: Assembly-CSharp
+    namespaceName: LowPolyWater
+    className: LowPolyWater
+  - hash:
+      serializedVersion: 2
       Hash: 31666030fd51e4173e4cae669f8984e5
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineSmoothPath
+  - hash:
+      serializedVersion: 2
+      Hash: 93e8d503bd030de186c245a6cd85a499
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: c6369b4cc3be620d6c9300e920bc3d52
@@ -796,6 +861,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineGroupComposer
+  - hash:
+      serializedVersion: 2
+      Hash: ed1111b1d81490e5db84d4dad2ce64da
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Reiniciarenopciones
   - hash:
       serializedVersion: 2
       Hash: 4718916586b3818eb69bf65df61f0f3a
@@ -972,6 +1043,12 @@ ScriptsOnlyBuild:
     className: EnemyMove
   - hash:
       serializedVersion: 2
+      Hash: 44a0bec967bb0485dd33f9258a3f61f0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ActivarVaya
+  - hash:
+      serializedVersion: 2
       Hash: 8a2f78c25d5e92eb97ee5544a162a2e9
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
@@ -1086,7 +1163,7 @@ ScriptsOnlyBuild:
     className: NavMeshModifierVolume
   - hash:
       serializedVersion: 2
-      Hash: 0a69afd3b2a798ee1e11472de3fe8ec7
+      Hash: 8318533585a5772e417adab4fe61b77b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: HealthAndDamage
@@ -1140,7 +1217,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: 65acb757b4f345cc75af69361ad1aefa
+      Hash: 7c578f0d243f33a4e82fae513717edcd
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: EnemyStadistics
@@ -1218,7 +1295,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 919c11d0314be67b7ea3490486debad2
+      Hash: fe8872620b0dec17925db3fcf2dbd0bc
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: "ActivarAnimaci\xF3nDa\xF1o"
@@ -1300,6 +1377,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.ProBuilder
     namespaceName: UnityEngine.ProBuilder
     className: TriggerBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: a041171c9a12864401b44bb036e392df
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: IralMenu
   - hash:
       serializedVersion: 2
       Hash: f669be52680c88846b2093fd41d1e06e
@@ -1434,6 +1517,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: cb44aa341445e0a0748344c2e5fef1c3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Imagenmenu
+  - hash:
+      serializedVersion: 2
       Hash: 4728e3d21cc2a12e391e71ec9b7eed0b
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1470,7 +1559,7 @@ ScriptsOnlyBuild:
     className: CinemachineStoryboard
   - hash:
       serializedVersion: 2
-      Hash: 173ff973daa5f2eaee4f4d0140b0f27c
+      Hash: 31a1ff1e5b754ce78df5100559d8e7f6
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LifeMiniBoss
@@ -1524,10 +1613,22 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: a3ff137caec35c0aa7814251e6890899
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CullLayers
+  - hash:
+      serializedVersion: 2
       Hash: c8efb8be0478240d4791acc3735f449b
     assemblyName: Cinemachine
     namespaceName: 
     className: CinemachineRecomposer
+  - hash:
+      serializedVersion: 2
+      Hash: fb55bfa114d3870e6f90591b6639e6fb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: OpcionesJuego
   - hash:
       serializedVersion: 2
       Hash: 5c07dd30a788898a98f349bde9e84e19

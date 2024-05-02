@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LifeMiniBoss : MonoBehaviour
 {
+    public bool estaVivo;
     [SerializeField] private float lifeEnemy = 100;
     [SerializeField] private float maxLifeEnemy = 100;
     [SerializeField] private bool enemyInvencible = false;
@@ -21,7 +22,7 @@ public class LifeMiniBoss : MonoBehaviour
     }
     void Start()
     {   
-    
+        estaVivo = false;
         lifeEnemy = maxLifeEnemy;
         lifeBar.gameObject.SetActive(false);
     }
@@ -44,6 +45,7 @@ public class LifeMiniBoss : MonoBehaviour
     {
         gameObject.SetActive(false);
         lifeBar.gameObject.SetActive(false);
+        estaVivo = true;
     }
 
     void Respawnd()

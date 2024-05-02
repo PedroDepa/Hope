@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: bc5980da0de522b4aad0a7c51a3eb2f6
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Atack
+      takeName: Armature|Atack
+      internalID: -4667240241141223586
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Idle
+      takeName: Armature|Idle
+      internalID: -8945691123924629249
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      internalID: 8349542763059015795
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: MinoBoss(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube
+      parentName: MinoBoss(Clone)
+      position: {x: -0, y: 5.0494957, z: 0}
+      rotation: {x: 0.5, y: 0.49999997, z: 0.5, w: -0.5}
+      scale: {x: 100.00002, y: 100.00002, z: 100.00002}
+    - name: Armature
+      parentName: MinoBoss(Clone)
+      position: {x: 0.02022171, y: 3.7760792, z: 0}
+      rotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 508.75754, y: 508.75754, z: 508.75754}
+    - name: Cadera
+      parentName: Armature
+      position: {x: -0, y: 0, z: -0.00003909722}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Panza
+      parentName: Cadera
+      position: {x: -0, y: 0.005, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Panza.001
+      parentName: Panza
+      position: {x: -0, y: 0.005, z: 0}
+      rotation: {x: 0.00000006757833, y: -0.000000048713094, z: 0.008332466, w: 0.9999653}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Panza.001_end
+      parentName: Panza.001
+      position: {x: -0, y: 0.013314121, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lengua
+      parentName: Cadera
+      position: {x: 0.006404177, y: 0.014428234, z: -0.000118297125}
+      rotation: {x: -0, y: 0.000000104308135, z: -0.22528191, w: 0.97429365}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: Lengua.005
+      parentName: Lengua
+      position: {x: -0.0000000013223643, y: 0.0040798145, z: -6.3305806e-13}
+      rotation: {x: 0.0022745286, y: -0.03390252, z: 0.44263226, w: 0.8960593}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Lengua.001
+      parentName: Lengua.005
+      position: {x: -4.691537e-10, y: 0.004354911, z: 3.259629e-11}
+      rotation: {x: 0.044976503, y: -0.031079782, z: 0.0015092469, w: 0.9985033}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: Lengua.002
+      parentName: Lengua.001
+      position: {x: 4.0279702e-10, y: 0.0060008788, z: 3.72529e-10}
+      rotation: {x: -0.09956919, y: -0.014485048, z: -0.21460286, w: 0.971505}
+      scale: {x: 0.99999976, y: 1.0000007, z: 1.0000001}
+    - name: Lengua.003
+      parentName: Lengua.002
+      position: {x: -9.87784e-10, y: 0.005325199, z: 1.2922101e-10}
+      rotation: {x: -0.035996083, y: 0.048594736, z: 0.26367247, w: 0.96271473}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Lengua.004
+      parentName: Lengua.003
+      position: {x: -0.0000000020395965, y: 0.004662267, z: 1.11758706e-10}
+      rotation: {x: -0.016459681, y: 0.03104347, z: 0.14028189, w: 0.98948795}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+    - name: Lengua.004_end
+      parentName: Lengua.004
+      position: {x: -0, y: 0.0053815185, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brazo
+      parentName: Cadera
+      position: {x: 0.001111302, y: 0.006846097, z: 0.010740388}
+      rotation: {x: -0.16950513, y: 0.30200982, z: -0.533351, w: 0.7717479}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Mano
+      parentName: Brazo
+      position: {x: -0.000000001117587, y: 0.0038551434, z: -1.11758706e-10}
+      rotation: {x: 0.059504908, y: -0.3382569, z: -0.0020722514, w: 0.93916833}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Mano_end
+      parentName: Mano
+      position: {x: -0, y: 0.004384502, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brazo.001
+      parentName: Cadera
+      position: {x: 0.0010890734, y: 0.006846097, z: -0.010340943}
+      rotation: {x: 0.024964718, y: -0.16897765, z: -0.56697094, w: 0.8058333}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Mano.001
+      parentName: Brazo.001
+      position: {x: -8.9406965e-10, y: 0.0040476415, z: 7.45058e-10}
+      rotation: {x: 0.20002526, y: 0.014486006, z: -0.06400757, w: 0.9775905}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Mano.001_end
+      parentName: Mano.001
+      position: {x: -0, y: 0.005060085, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pierna
+      parentName: Armature
+      position: {x: -0, y: -0.0042270985, z: -0.0029780024}
+      rotation: {x: -0.47307444, y: 0.47387144, z: -0.5249892, w: 0.52538824}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Rodilla
+      parentName: Pierna
+      position: {x: -2.466595e-10, y: 0.0019694127, z: -6.8394e-12}
+      rotation: {x: -0.0332124, y: 0.0010793818, z: -0.00014281619, w: 0.99944776}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Pie
+      parentName: Rodilla
+      position: {x: 6.4173944e-11, y: 0.0019694124, z: -6.984919e-12}
+      rotation: {x: -0.008435725, y: -0.99283975, z: -0.027506748, w: 0.11593736}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Pie_end
+      parentName: Pie
+      position: {x: -0, y: 0.0028328907, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pierna.001
+      parentName: Armature
+      position: {x: -0, y: 0.004147604, z: -0.0029780024}
+      rotation: {x: 0.5000001, y: -0.5, z: 0.5, w: -0.4999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rodilla.001
+      parentName: Pierna.001
+      position: {x: -0, y: 0.0019694124, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pie.001
+      parentName: Rodilla.001
+      position: {x: -0, y: 0.0019694124, z: 0}
+      rotation: {x: 0.0015961041, y: 0.58423406, z: 0.002217531, w: 0.81158066}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Pie.001_end
+      parentName: Pie.001
+      position: {x: -0, y: 0.0028328907, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube.001
+      parentName: MinoBoss(Clone)
+      position: {x: -0, y: 5.0494957, z: 0}
+      rotation: {x: 0.5, y: 0.49999997, z: 0.5, w: -0.5}
+      scale: {x: 100.00002, y: 100.00002, z: 100.00002}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

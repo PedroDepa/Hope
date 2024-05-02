@@ -11,6 +11,8 @@ public class ActivarAnimaciónDaño : MonoBehaviour
     private bool canAttack = true; // Variable para controlar si se puede atacar
 
     [SerializeField] private EnemyMove enemyMove;
+    [SerializeField] private BoxCollider damageCollider;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -18,20 +20,20 @@ public class ActivarAnimaciónDaño : MonoBehaviour
 
     void OnTriggerEnter(Collider other) // Cambiar de OnTriggerStay a OnTriggerEnter para detectar la colisión al entrar en el área
     {
-        if(other.CompareTag("Player")) // Verificar colisión con el jugador
+        if (other.CompareTag("Player")) // Verificar colisión con el jugador
         {
             enemyMove.enabled = false;
             canAttack = true; // Evitar nuevos ataques mientras se realiza uno
             playerInArea = true;
             StartAttackCoroutine();
-            
+
         }
     }
 
 
     void OnTriggerStay(Collider other)
     {
-         if(other.CompareTag("Player")) // Restablecer cuando el jugador sale del área
+        if (other.CompareTag("Player")) // Restablecer cuando el jugador sale del área
         {
             enemyMove.enabled = false;
             canAttack = true; // Evitar nuevos ataques mientras se realiza uno
@@ -41,7 +43,7 @@ public class ActivarAnimaciónDaño : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Player")) // Restablecer cuando el jugador sale del área
+        if (other.CompareTag("Player")) // Restablecer cuando el jugador sale del área
         {
             enemyMove.enabled = true;
             playerInArea = false;
@@ -63,7 +65,7 @@ public class ActivarAnimaciónDaño : MonoBehaviour
     {
         enemyAttackOn = true;
         canAttack = false; // Evitar nuevos ataques mientras se realiza uno
-        
+
         animator.SetBool("isAttacking", true); // Activar la animación de ataque
         yield return new WaitForSeconds(5f); // Tiempo que la animación de ataque dura
 

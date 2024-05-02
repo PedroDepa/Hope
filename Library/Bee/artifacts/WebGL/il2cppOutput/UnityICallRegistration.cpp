@@ -582,6 +582,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_ScreenToViewportPoint_Injected();
 		Register_UnityEngine_Camera_ScreenToViewportPoint_Injected();
 
+		//System.Void UnityEngine.Camera::SetLayerCullDistances(System.Single[])
+		void Register_UnityEngine_Camera_SetLayerCullDistances();
+		Register_UnityEngine_Camera_SetLayerCullDistances();
+
 		//System.Void UnityEngine.Camera::SetupCurrent(UnityEngine.Camera)
 		void Register_UnityEngine_Camera_SetupCurrent();
 		Register_UnityEngine_Camera_SetupCurrent();
@@ -2334,6 +2338,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_GetIndicesImpl();
 		Register_UnityEngine_Mesh_GetIndicesImpl();
 
+		//System.Int32[] UnityEngine.Mesh::GetTrianglesImpl(System.Int32,System.Boolean)
+		void Register_UnityEngine_Mesh_GetTrianglesImpl();
+		Register_UnityEngine_Mesh_GetTrianglesImpl();
+
 		//System.Void UnityEngine.Mesh::ClearImpl(System.Boolean)
 		void Register_UnityEngine_Mesh_ClearImpl();
 		Register_UnityEngine_Mesh_ClearImpl();
@@ -2358,6 +2366,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_RecalculateBoundsImpl();
 		Register_UnityEngine_Mesh_RecalculateBoundsImpl();
 
+		//System.Void UnityEngine.Mesh::RecalculateNormalsImpl(UnityEngine.Rendering.MeshUpdateFlags)
+		void Register_UnityEngine_Mesh_RecalculateNormalsImpl();
+		Register_UnityEngine_Mesh_RecalculateNormalsImpl();
+
 		//System.Void UnityEngine.Mesh::SetArrayForChannelImpl(UnityEngine.Rendering.VertexAttribute,UnityEngine.Rendering.VertexAttributeFormat,System.Int32,System.Array,System.Int32,System.Int32,System.Int32,UnityEngine.Rendering.MeshUpdateFlags)
 		void Register_UnityEngine_Mesh_SetArrayForChannelImpl();
 		Register_UnityEngine_Mesh_SetArrayForChannelImpl();
@@ -2378,9 +2390,17 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.MeshFilter
 
+		//System.Void UnityEngine.MeshFilter::set_mesh(UnityEngine.Mesh)
+		void Register_UnityEngine_MeshFilter_set_mesh();
+		Register_UnityEngine_MeshFilter_set_mesh();
+
 		//System.Void UnityEngine.MeshFilter::set_sharedMesh(UnityEngine.Mesh)
 		void Register_UnityEngine_MeshFilter_set_sharedMesh();
 		Register_UnityEngine_MeshFilter_set_sharedMesh();
+
+		//UnityEngine.Mesh UnityEngine.MeshFilter::get_sharedMesh()
+		void Register_UnityEngine_MeshFilter_get_sharedMesh();
+		Register_UnityEngine_MeshFilter_get_sharedMesh();
 
 	//End Registrations for type : UnityEngine.MeshFilter
 
@@ -3357,6 +3377,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.SceneManagement.Scene::IsValidInternal(System.Int32)
 		void Register_UnityEngine_SceneManagement_Scene_IsValidInternal();
 		Register_UnityEngine_SceneManagement_Scene_IsValidInternal();
+
+		//System.Int32 UnityEngine.SceneManagement.Scene::GetBuildIndexInternal(System.Int32)
+		void Register_UnityEngine_SceneManagement_Scene_GetBuildIndexInternal();
+		Register_UnityEngine_SceneManagement_Scene_GetBuildIndexInternal();
 
 		//System.Int32 UnityEngine.SceneManagement.Scene::GetRootCountInternal(System.Int32)
 		void Register_UnityEngine_SceneManagement_Scene_GetRootCountInternal();
